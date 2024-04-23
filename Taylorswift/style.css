@@ -33,6 +33,16 @@ h2{
 .album{
   text-decoration: none;
   padding: 2px;
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  a:active{
+    background-color: brown;
+  }
+  a:visted{
+    background-color: #0d0d0d;
+  }
 }
 .carrer{
     background-image: linear-gradient(to right , rgb(255, 184, 191),#DBC9FA);
@@ -53,7 +63,7 @@ h2{
     border-color: #c154c1;
 }
 .love{
-    background-image: url(./2018-taylor-swift-9v.jpg);
+    background-image: url(../assets/2018-taylor-swift-9v.jpg);
     height: 1300px;
     background-repeat: no-repeat;
     font-size: 100px;
@@ -71,4 +81,7 @@ h2{
 }
 .about{
     padding: 2px;
+}
+.pack::first-letter{
+    font-size: 150px;
 }
