@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-left: 0;
+    --yellow:#FFED00;
+    --red:#ED232A;
+
+}
+#head  {
+    height: 100px;
+    width: 100vw;
+
+    background-color:var(--red);
+    
+    display: flex;
+    margin-top: 0;
+
+}
+.img1{
+    height: 70px;
+    width: 100px;
+    padding: 15px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+.row{
+    width: 75px;
+    height: 100px;
+    background-color:#ffe135;
+}
+.list{
+    display:flex;
+    color:var(--red);
+    
+    
+}
+.list ul{
+    display: flex;
+    list-style-type: none;
+    margin-left: 600px;
+    padding: 15px;
+    gap: 20px;
+    margin-top: 25px;
+    
+    
+    
+}
+.list ul img{
+    height:20px;
+    width: 20px;
+    background-color: var(--yellow);
+}
+.list a{
+    text-decoration: none;
+    color: var(--yellow);
+}
+#banner img{
+    width: 300px;
+    height: 200px;
+    margin-left: 800px;
+    margin-top: 50px;
+
+}
+#banner{
+    background-color:var(--yellow);
+     /* background-image: url(./assets/icons8-noodles-94.png); */
+     height:600px;
+     margin-top: 0;
+     padding-top: 0;
+     width: 100vw;
+     display: inline-block;
+     background-repeat: no-repeat;
+     text-shadow: 5px 5px 5px var(--yellow);
+}
+.s1{
+    position: absolute;
+    bottom: 100px;
+    left: 40px;
+    font-size: 68px;
+    color:var(--red);
+
+}
+.s2{
+    position: absolute;
+    bottom: 50px;
+    left:300px;
+    font-size: 34px;
+    color: var(--red);
+    
+}
