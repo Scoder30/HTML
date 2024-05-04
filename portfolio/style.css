@@ -9,7 +9,8 @@
     --green:#386f83;
     --txt:#bb9271;
     --pink:#cc6b96;
-    --lav:#813c60
+    --lav:#813c60;
+    scroll-behavior: smooth;
 
 }
 body{
