@@ -111,6 +111,7 @@ const data=[
       },
       
     ]
+    
     const main=document.getElementById('movies')
 
    function show (data)
@@ -124,28 +125,16 @@ const data=[
         someDiv.classList.add("Movie") 
         const title = document.createElement('h2')
         title.textContent = ele.Title
-        const image = document.createElement('img')
-        image.setAttribute('src', ele.Poster)
+        // const image = document.createElement('img')
+        // image.setAttribute('src', ele.Poster)
         const actor = document.createElement('p')
         actor.textContent="Acotrs :  "+ ele.Actors
         const year = document.createElement('time')
         year.textContent="Year of released --  " +ele.Year
-        someDiv.append(image,title,actor,year)
+        someDiv.append(title,actor,year)
         main.appendChild(someDiv)//<div id="library">
         //<div class="cartoon"</div>
         // </div >
 	})
 }
           show(data)
-//    function show(data){
-//     data.foreach(function(ele){
-//         const maindiv=document.createElement('div')
-//         maindiv.classList.add("movies")
-//         const head=document.createElement('h2')
-//         head.textContent=ele.Title
-//         const years=document.createElement('p')
-//         years.textContent=ele.Year
-//     })
-
-//    }
-//  show(data)
