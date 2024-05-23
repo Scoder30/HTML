@@ -3,7 +3,7 @@ let songIndex=0;
 let audioElement=new Audio('songs/song1.mp3');
 let masterPlay=document.getElementById('masterPlay')
 let myProgressBar=document.getElementById("myProgressBar")
-let songItem=Array.from(document.getElementsByClassName('songlist'))
+// let songItem=Array.from(document.getElementsByClassName('songlist'))
 let songItemPlay=document.getElementsByClassName('plays')
 let songs=[
     
@@ -27,16 +27,19 @@ masterPlay.addEventListener('click',function(){
         masterPlay.classList.add('fa-play-circle')
     }
 })
- myProgressBar.addEventListener('timeupdate', function(){
-    console.log('timeupdate')
-    progress=int((audioElement.currentTime/audioElement.duration)*100)
-    console.log(time)
-    myProgressBar.value=progress
+if(audioElement.play()){
+    myProgressBar.addEventListener('timeupdate', function(){
+        console.log('timeupdate')
+        progress=int((audioElement.currentTime/audioElement.duration)*100)
+        console.log(time)
+        myProgressBar.value=progress
+    
+     })
+     myProgressBar.addEventListener('change', function(){
+        audioElement.currentTime=myProgressBar.value*audioElement.duration/100;
+     })
+}
 
- })
- myProgressBar.addEventListener('change', function(){
-    audioElement.currentTime=myProgressBar.value*audioElement.duration/100;
- })
 
 // const makeAllPlays=function(){
 //     songItemPlay.forEach(function(element){
@@ -77,6 +80,8 @@ masterPlay.addEventListener('click',function(){
     audioElement.src=`songs/song${songIndex+1}.mp3`;
     audioElement.currentTime=0;
     audioElement.play();
+    masterPlay.classList.remove('fa-play-cirle')
+    masterPlay.classList.add('fa-pause-circle')
  })
  document.getElementById('previous').addEventListener('click',function(){
     if(songIndex<=0){
@@ -88,6 +93,8 @@ masterPlay.addEventListener('click',function(){
     audioElement.src=`songs/song${songIndex+1}.mp3`;
     audioElement.currentTime=0;
     audioElement.play();
+    masterPlay.classList.remove('fa-play-cirle')
+    masterPlay.classList.add('fa-pause-circle')
  })
 
 
